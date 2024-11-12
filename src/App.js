@@ -24,13 +24,13 @@ function App() {
     const getStates = () => {
         console.log(email, password, name);
     }
-    const check = () => {
-        axios.get("http://127.0.0.1:8000/api/v0/test").then(function(response) {
-            console.log(response);
-        }).catch(function(error) {
-            console.log(error);
-        })
-    }
+    // const check = () => {
+    //     axios.get("http://127.0.0.1:8000/api/v0/test").then(function(response) {
+    //         console.log(response);
+    //     }).catch(function(error) {
+    //         console.log(error);
+    //     })
+    // }
 
     const nameRef = createRef()
     const emailRef = createRef()
@@ -53,7 +53,7 @@ function App() {
                 setToken(data.token);
             })
             .catch(err => {
-                console.error(err)
+                console.error(err.response)
             })
     }
 
